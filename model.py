@@ -49,8 +49,8 @@ class AttackMenu(MenuInterface):
         return self.open
     
     def upgrade(self) -> None:
-        self.scroll_up()
         self.get_open().click(self.device)
+        self.scroll_up()
         for button in self.get_upgrades():
             button.click(self.device)
         self.get_close().click(self.device)
@@ -83,8 +83,8 @@ class HeroMenu(MenuInterface):
         return self.open
 
     def upgrade(self) -> None:
-        self.scroll_up()
         self.get_open().click(self.device)
+        self.scroll_up()
         for button in self.get_upgrades():
             button.click(self.device)
         self.get_close().click(self.device)
